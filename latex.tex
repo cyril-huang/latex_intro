@@ -1,0 +1,80 @@
+%      Copyright (c) 2023 Cyril Huang, Gyoza Workshop
+%      Permission is granted to copy, distribute and/or modify this document
+%      under the terms of the GNU Free Documentation License, Version 1.1
+%      or any later version published by the Free Software Foundation;
+%      with the Invariant Sections being LIST THEIR TITLES, with the
+%      Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.
+%      A copy of the license is included in the section entitled "GNU
+%      Free Documentation License".
+
+\documentclass[a4paper,10pt,twoside]{book}
+
+\usepackage{fontspec}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xeCJK}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{array}
+\usepackage{makeidx}
+
+\usepackage{layout}
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{mflogo}
+\usepackage{metalogo}
+
+\usepackage[margin=2cm]{geometry}
+
+\setCJKmainfont{Noto Sans CJK TC}
+\setmainfont{Nimbus Roman No9 L}
+\makeindex
+
+\hypersetup{
+  backref,
+  unicode=true,
+  bookmarks=true,
+  pdfauthor=Cyril Huang,
+  colorlinks=true,
+  breaklinks=true,
+  hyperfigures=true,
+  pdfstartview=FitH,
+  linkcolor=blue
+}
+
+\lstloadlanguages{bash,[ANSI]C,[gnu]make}
+\lstset{basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries
+}
+
+\pagestyle{fancy}
+\fancyhead[RO]{\small\bfseries\rightmark\ \ \thepage}
+\lfoot{餃子出品必屬佳作}
+\cfoot{}
+\rfoot{}
+ 
+\title{{\LaTeX} 基本寫作\thanks{大饅頭}}
+\author{
+  大頭\\
+  cyril\_huang@yahoo.com \\
+  餃子出版社
+  \and
+  大雄\\
+  shawn\_chiou@gmail.com \\
+  餃子出版社
+}
+
+\begin{document}
+  %\includegraphics[]{images/gyoza.eps}
+  \maketitle
+  \tableofcontents
+  \input{tex.tex}
+  \input{install.tex}
+  \input{packages.tex}
+  \input{advance.tex}
+  \input{math.tex}
+  %Todo graphics macro
+  %\input{graphics.tex}
+\end{document}
